@@ -95,5 +95,5 @@ stages:
   - deployment: DeploymentJob
     pool:
       vmImage: $(vmImageName)
-    steps:
-    - bash: echo "Hello world. This is just a test"
+      steps:
+      - bash: echo "Hello world. This is just a test"
