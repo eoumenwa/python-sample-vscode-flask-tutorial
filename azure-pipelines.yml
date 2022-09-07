@@ -96,4 +96,4 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
-- bash: echo "Hello world. This is just a test"
+    - bash: echo "Hello world. This is just a test"
