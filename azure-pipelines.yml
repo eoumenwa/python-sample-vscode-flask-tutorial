@@ -86,14 +86,11 @@ stages:
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
               startUpCommand: 'startup.txt'
-              
-- stage: Test
-  displayName: 'Test Addition from NOU'
-  dependsOn: Build
-  condition: succeeded()
-  jobs:
-  - deployment: DeploymentJob
-    pool:
-      vmImage: $(vmImageName)
-      steps:
-      - bash: echo "Hello world. This is just a test"
+                                   
+          - task: CmdLine@2
+            displayName: 'Test Script : oeumenwa-flaskpipelines'
+            inputs:
+                  script: |
+                    echo This is just a test script
+                    
+                    echo Hello world
